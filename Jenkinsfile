@@ -30,12 +30,5 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            script {
-                docker.image("${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}").remove()
-            }
-        }
     }
 }
